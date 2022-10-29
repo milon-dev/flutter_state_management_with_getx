@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            GetBuilder<TaPController>(builder: (controller){
+            GetBuilder<TaPController>(builder: (_){
              return  Container(
                height: 40,
                width: double.maxFinite,
@@ -28,7 +28,7 @@ class HomePage extends StatelessWidget {
                ),
                child: Center(
                  child: Text(
-                   'X= ${controller.x.toString()}',
+                   'X= ${taPController.x.toString()}',
                    style: const TextStyle(
                      fontSize: 16,
                      color: Colors.white,
