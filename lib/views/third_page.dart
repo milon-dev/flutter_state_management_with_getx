@@ -43,9 +43,29 @@ class ThirdPage extends StatelessWidget {
                 ),
               );
             }),
-            const SizedBox(height: 4),
+            const SizedBox(height: 8),
+            GetX<TapController>(builder: (_){
+              return Container(
+                height: 40,
+                width: double.maxFinite,
+                decoration: BoxDecoration(
+                  color: Colors.green.withOpacity(.50),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Center(
+                  child: Text(
+                    'Y= ${tapController.y.value.toString()}',
+                    style: const TextStyle(
+                      fontSize: 16,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              );
+            }),
+            const SizedBox(height: 10),
             GestureDetector(
-              onTap: ()=>null,
+              onTap: ()=>tapController.increaseY(),
               child:  Container(
                 height: 60,
                 width: double.maxFinite,
@@ -55,7 +75,67 @@ class ThirdPage extends StatelessWidget {
                 ),
                 child: const Center(
                   child: Text(
-                    'Go To Third',
+                    'Increase Y',
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 10),
+            GestureDetector(
+              onTap: ()=>tapController.decreaseY(),
+              child:  Container(
+                height: 60,
+                width: double.maxFinite,
+                decoration: BoxDecoration(
+                  color: Colors.green.withOpacity(.70),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: const Center(
+                  child: Text(
+                    'Decrease Y',
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 18),
+            Obx(() => Container(
+              height: 40,
+              width: double.maxFinite,
+              decoration: BoxDecoration(
+                color: Colors.redAccent.withOpacity(.70),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Center(
+                child: Text(
+                  'X+Y = ${tapController.z.value.toString()}',
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),),
+            const SizedBox(height: 10),
+            GestureDetector(
+              onTap: ()=>tapController.totalXY(),
+              child:  Container(
+                height: 60,
+                width: double.maxFinite,
+                decoration: BoxDecoration(
+                  color: Colors.redAccent.withOpacity(.70),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: const Center(
+                  child: Text(
+                    'Total X+Y',
                     style: TextStyle(
                       fontSize: 18,
                       color: Colors.white,
