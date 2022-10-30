@@ -9,6 +9,10 @@ void main() async{
   // WidgetsFlutterBinding.ensureInitialized();
   // await di.init();
 
+  /** Initialize all controllers manually....*/
+  WidgetsFlutterBinding.ensureInitialized();
+  RootBinding().dependencies();
+
   runApp(const MyApp());
 }
 
