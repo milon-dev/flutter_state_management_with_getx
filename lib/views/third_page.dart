@@ -3,20 +3,19 @@ import 'package:get/get.dart';
 
 import '../controllers/tap_controller.dart';
 
-class FirstPage extends StatelessWidget {
-  FirstPage({Key? key}) : super(key: key);
+class ThirdPage extends StatelessWidget {
+  ThirdPage({Key? key}) : super(key: key);
   TapController tapController=Get.find();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("First Page"),
+        title: const Text("Third Page"),
         leading: IconButton(
           onPressed: ()=> Get.back(),
           icon: Icon(Icons.arrow_back_ios_new_outlined,color: Colors.white,),
         ),
-        
       ),
       body: Container(
         margin: const EdgeInsets.all(12),
@@ -44,10 +43,9 @@ class FirstPage extends StatelessWidget {
                 ),
               );
             }),
-
             const SizedBox(height: 4),
             GestureDetector(
-              onTap: ()=>tapController                .decreaseX(),
+              onTap: ()=>null,
               child:  Container(
                 height: 60,
                 width: double.maxFinite,
@@ -57,7 +55,7 @@ class FirstPage extends StatelessWidget {
                 ),
                 child: const Center(
                   child: Text(
-                    'Decrease X',
+                    'Go To Third',
                     style: TextStyle(
                       fontSize: 18,
                       color: Colors.white,

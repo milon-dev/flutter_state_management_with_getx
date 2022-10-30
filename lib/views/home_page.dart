@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_state_management_with_getx/views/second_page.dart';
+import 'package:get/get.dart';
 import 'package:flutter_state_management_with_getx/controllers/tap_controller.dart';
 import 'package:flutter_state_management_with_getx/views/first_page.dart';
-import 'package:get/get.dart';
+
 
 class HomePage extends StatelessWidget {
 
@@ -82,7 +84,7 @@ class HomePage extends StatelessWidget {
             ),
             SizedBox(height: 12),
             GestureDetector(
-              onTap: ()=>null,
+              onTap: ()=>Get.to(SecondPage()),
               child:  Container(
                 height: 60,
                 width: double.maxFinite,
@@ -92,7 +94,7 @@ class HomePage extends StatelessWidget {
                 ),
                 child: Center(
                   child: Text(
-                    'Tab',
+                    'Go To Second',
                     style: TextStyle(
                       fontSize: 18,
                       color: Colors.white,
