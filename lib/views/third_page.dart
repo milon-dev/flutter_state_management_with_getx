@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_state_management_with_getx/controllers/list_controller.dart';
 import 'package:get/get.dart';
 
 import '../controllers/tap_controller.dart';
@@ -6,6 +7,7 @@ import '../controllers/tap_controller.dart';
 class ThirdPage extends StatelessWidget {
   ThirdPage({Key? key}) : super(key: key);
   TapController tapController=Get.find();
+  ListController listController=Get.put(ListController());
 
   @override
   Widget build(BuildContext context) {
@@ -115,7 +117,7 @@ class ThirdPage extends StatelessWidget {
               ),
               child: Center(
                 child: Text(
-                  'X+Y = ${tapController.z.value.toString()}',
+                  'Total value = ${tapController.z.value.toString()}',
                   style: TextStyle(
                     fontSize: 18,
                     color: Colors.white,
@@ -136,6 +138,27 @@ class ThirdPage extends StatelessWidget {
                 child: const Center(
                   child: Text(
                     'Total X+Y',
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 10),
+            GestureDetector(
+              onTap: ()=>listController.setValues(tapController.z.value),
+              child:  Container(
+                height: 60,
+                width: double.maxFinite,
+                decoration: BoxDecoration(
+                  color: Colors.purpleAccent.withOpacity(.70),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: const Center(
+                  child: Text(
+                    'Add List',
                     style: TextStyle(
                       fontSize: 18,
                       color: Colors.white,
