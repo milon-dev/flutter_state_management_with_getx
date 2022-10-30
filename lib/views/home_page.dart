@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_state_management_with_getx/controllers/tap_controller.dart';
+import 'package:flutter_state_management_with_getx/views/first_page.dart';
 import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {
 
   HomePage({Key? key}) : super(key: key);
 
-  TaPController taPController=Get.put(TaPController());
+  TapController tapController=Get.put(TapController());
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class HomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            GetBuilder<TaPController>(builder: (_){
+            GetBuilder<TapController>(builder: (_){
              return  Container(
                height: 40,
                width: double.maxFinite,
@@ -28,7 +29,7 @@ class HomePage extends StatelessWidget {
                ),
                child: Center(
                  child: Text(
-                   'X= ${taPController.x.toString()}',
+                   'X= ${tapController.x.toString()}',
                    style: const TextStyle(
                      fontSize: 16,
                      color: Colors.white,
@@ -39,7 +40,7 @@ class HomePage extends StatelessWidget {
            }),
             SizedBox(height: 4),
             GestureDetector(
-              onTap: ()=>taPController.increaseX(),
+              onTap: ()=>tapController.increaseX(),
               child:  Container(
                 height: 60,
                 width: double.maxFinite,
@@ -60,7 +61,7 @@ class HomePage extends StatelessWidget {
             ),
             SizedBox(height: 12),
             GestureDetector(
-              onTap: ()=>null,
+              onTap: ()=>Get.to(FirstPage()),
               child:  Container(
                 height: 60,
                 width: double.maxFinite,
@@ -68,9 +69,9 @@ class HomePage extends StatelessWidget {
                   color: Colors.green.withOpacity(.70),
                   borderRadius: BorderRadius.circular(20),
                 ),
-                child: Center(
+                child: const Center(
                   child: Text(
-                    'Tab',
+                    'Go To First',
                     style: TextStyle(
                       fontSize: 18,
                       color: Colors.white,
