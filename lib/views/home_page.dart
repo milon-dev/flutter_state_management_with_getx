@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
 
   HomePage({Key? key}) : super(key: key);
 
-  TapController tapController=Get.put(TapController());
+  TapController tapController=Get.find();
 
   @override
   Widget build(BuildContext context) {

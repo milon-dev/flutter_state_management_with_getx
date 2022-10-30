@@ -6,8 +6,9 @@ import '../controllers/tap_controller.dart';
 
 class ThirdPage extends StatelessWidget {
   ThirdPage({Key? key}) : super(key: key);
+
   TapController tapController=Get.find();
-  ListController listController=Get.put(ListController());
+  ListController listController=Get.find();
 
   @override
   Widget build(BuildContext context) {

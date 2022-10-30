@@ -5,6 +5,7 @@ import '../controllers/tap_controller.dart';
 
 class FirstPage extends StatelessWidget {
   FirstPage({Key? key}) : super(key: key);
+
   TapController tapController=Get.find();
 
   @override
