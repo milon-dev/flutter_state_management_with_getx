@@ -1,12 +1,9 @@
 import 'package:get/get.dart';
-
-import '../controllers/list_controller.dart';
-import '../controllers/tap_controller.dart';
+import '../controllers/counter_controller.dart';
 
 class RootBinding implements Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<TapController>(() => TapController());
-    Get.lazyPut<ListController>(() => ListController());
+    Get.lazyPut<CounterController>(() => CounterController());
   }
 }

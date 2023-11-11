@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_state_management_with_getx/bindings/root_binding.dart';
+import 'package:flutter_state_management_with_getx/screens/home_screen.dart';
 import 'package:get/get.dart';
-import 'package:flutter_state_management_with_getx/views/home_page.dart';
 
 void main() async{
-
-  /** Initialize all controllers manually....*/
-  // WidgetsFlutterBinding.ensureInitialized();
-  // await di.init();
 
   /** Initialize all controllers manually....*/
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:HomePage(),
+      home:const MyHomePage(),
     );
   }
 }
