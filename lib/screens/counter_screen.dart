@@ -40,7 +40,7 @@ class _CounterScreenState extends State<CounterScreen> {
             const MiddleContainer(),
             const SizedBox(height: 10),
             Container(
-              color: Colors.red[100],
+              color: Colors.teal.withOpacity(0.2),
               padding: const EdgeInsets.all(20.0),
               margin: const EdgeInsets.symmetric(horizontal: 20.0),
               child:  Column(
@@ -53,7 +53,7 @@ class _CounterScreenState extends State<CounterScreen> {
                         padding: const EdgeInsets.all(10.0),
                         child: Obx(() =>  Text(
                           counterController.actionName.value,
-                          style: TextStyle(fontSize: 24.0),
+                          style: const TextStyle(fontSize: 24.0),
                         )),
                       )
                     ],
