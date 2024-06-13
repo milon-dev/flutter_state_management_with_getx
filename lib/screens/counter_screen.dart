@@ -19,7 +19,7 @@ class _CounterScreenState extends State<CounterScreen> {
     print("======================= CounterScreen build ======================");
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Managing state without Getx'),
+        title: const Text('Managing state with Getx'),
         centerTitle: true,
       ),
       body: Center(
@@ -30,7 +30,7 @@ class _CounterScreenState extends State<CounterScreen> {
               color: Colors.lightGreen[600],
               padding: const EdgeInsets.all(20.0),
               child: const Text(
-                'Managing state with provider',
+                'Managing state with Getx',
                 style: TextStyle(fontSize: 22.0,color: Colors.white),
               ),
             ),
