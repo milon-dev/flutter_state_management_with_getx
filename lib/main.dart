@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_state_management_with_getx/bindings/root_binding.dart';
-import 'package:flutter_state_management_with_getx/screens/home_screen.dart';
+import 'package:flutter_state_management_with_getx/screens/counter_screen.dart';
 import 'package:get/get.dart';
 
 void main() async{
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:const MyHomePage(),
+      home:const CounterScreen(),
     );
   }
 }
