@@ -14,3 +14,6 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+## Screen Shorts
+![getx](https://github.com/milonsheikh88/flutter_state_management_with_getx/assets/71063427/78d27685-5df8-49b8-8fa4-e5b834139792)
